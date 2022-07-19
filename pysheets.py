@@ -38,16 +38,7 @@ service = build('sheets', 'v4', credentials=creds)
 
         # Call the Sheets API
 sheet = service.spreadsheets()
-#result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-                                   # range="Sheet1!A1:C6").execute()
-#values = result.get('values', [])
-#lst = [element for innerList in values for element in innerList]
 
-#def Convert(lst):
-    #res_dct = {lst[i]: lst[i + 1] for i in range(0, len(lst), 2)}
-    #return res_dct
-
-#print(Convert(lst))
 
 result =  sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                     range="Sheet1!A1:B6").execute()
